@@ -21,7 +21,7 @@ If you want more details about this competition, please [click here](https://www
     * [Slides](https://docs.google.com/presentation/d/1gcjl7WG3ZiM8fpEypsbxfQv8bCwBCvr66ohnju1qRvE/edit#slide=id.gfb4b64deb3_0_30) for sprint 2  
     Reporter: Yunjie Huang
     * [Slides](https://docs.google.com/presentation/d/18EvtdH91X8BNfZPydBUV2E1gd9Ob9fZTICXbYSq9I0U/edit?usp=sharing) for sprint 3  
-    Reporter:Ruei-yang Huang
+    Reporter:Ruei-Yang Huang
     * Sprint 4  
     [Slides](https://docs.google.com/presentation/d/1ORs0PzGxYIg9fgvDt4KmARgAMtmrfz4tpp-DC2gAvp4/edit?usp=sharing)   Reporter:Tian Tan  
     [Github README](https://github.com/YunjieH/EC-601-A1-Group5/blob/main/Sprint4/README.md)  
