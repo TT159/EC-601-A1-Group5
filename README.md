@@ -14,7 +14,7 @@ If you want more details about this competition, please [click here](https://www
     * Lu Yao  ly21@bu.edu
     * Ruei-Yang Huang  ryh66@bu.edu
 * Process record:  
-    * Meeting record
+    * Meeting record  
     [Meeting Minutes on Google Doc](https://docs.google.com/document/d/1po9hrZAp04lbLL3IngvLaURMMgkMC6j_7K1OG1VMwKI/edit)  
     * [Slides](https://docs.google.com/presentation/d/1Rbz8CERPpYzqb3R-5VM3KQV54BMmuGFbkspIB72vo6Y/edit#slide=id.p) for sprint 1  
     Reporter: Lu Yao
