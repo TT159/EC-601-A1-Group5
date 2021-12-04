@@ -22,9 +22,10 @@ If you want more details about this competition, please [click here](https://www
     Reporter: Yunjie Huang
     * [Slides](https://docs.google.com/presentation/d/18EvtdH91X8BNfZPydBUV2E1gd9Ob9fZTICXbYSq9I0U/edit?usp=sharing) for sprint 3  
     Reporter:Ruei-yang Huang
-    * [Slides](https://docs.google.com/presentation/d/1ORs0PzGxYIg9fgvDt4KmARgAMtmrfz4tpp-DC2gAvp4/edit?usp=sharing) for sprint 4  
+    * Sprint 4
+    [Slides](https://docs.google.com/presentation/d/1ORs0PzGxYIg9fgvDt4KmARgAMtmrfz4tpp-DC2gAvp4/edit?usp=sharing)   
     Reporter:Tian Tan
-    * [Sprint 4](https://github.com/YunjieH/EC-601-A1-Group5/blob/main/Sprint4/README.md)
+    [Github README](https://github.com/YunjieH/EC-601-A1-Group5/blob/main/Sprint4/README.md)  
 
 
 * 0.2
