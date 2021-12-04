@@ -2,8 +2,8 @@
 ## Introduction
 This  competition, initiated by **Radiological Society of North America (RSNA)** and **Medical Image Computing and Computer Assisted Intervention Society (the MICCAI Society)**, is aimed to predict methylation of the **MGMT promoter**, which is a genetic biomarker important for the treatment of brian cancer.  
 
-The dataset contains four types of **magnetic resonance imaging(MRI)** images with label 1 (MGMT promoter exists) or 0 (MGMT promoter doesn't exist).  
-![1638649541(1)](https://user-images.githubusercontent.com/62274799/144723644-9b92084e-4bb3-49c2-bd8a-14599af4a966.png)
+The dataset contains four types of **magnetic resonance imaging(MRI)** images with label 1 (MGMT promoter exists) or 0 (MGMT promoter doesn't exist). 
+<div align=center><img width="600" height="400" src="https://user-images.githubusercontent.com/62274799/144723644-9b92084e-4bb3-49c2-bd8a-14599af4a966.png"/></div>  
 
 If you want more details about this competition, please [click here](https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification)
 
