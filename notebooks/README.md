@@ -84,8 +84,8 @@ EXPLORATORY DATA ANALYSIS (EDA)
 
 ## Accuracy / auc: 
 1. accuracy = 0.5263, auc = 0.5291
-2. accuracy = 0.5263, auc = 0.5291
-3. accuracy = 0.5263, auc - 0.5291
+2. /
+3. /
 4. accuracy = 0.5, acc = 0.4439
 5. accuracy = 0.6184, auc = 0.6565
 6. accuracy = 0.5, auc = 0.5796
