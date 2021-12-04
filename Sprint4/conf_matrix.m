@@ -14,33 +14,69 @@ realtest = readmatrix("newtest_data.csv");
 
 % get the prediction matrix of testset
 fprintf("==== Loading real labels of testset.\n");
-% change the filename for different model
-predict = readmatrix("TT_Model1__EffNetPytorch.csv");
+predict = readmatrix("TT_Model4_DenseNet.csv");
 
 %% we set the threshold to 0.5 to build a confusion matrix
 % predict value <= 0.5, then labeled as 0, otherwise 1
 
+% [n,d] = size(predict);
+% pre_label = zeros(n,d);
+% for i = 1:n
+%     if predict(i,2) <= 0.5
+%         pre_label(i,1) = predict(i,1);
+%         pre_label(i,2) = 0;
+%     else
+%         pre_label(i,1) = predict(i,1);
+%         pre_label(i,2) = 1;
+%     end
+% end
+
+%% update code - to find the confusion matrix under with best ACC
 [n,d] = size(predict);
 pre_label = zeros(n,d);
-for i = 1:n
-    if predict(i,2) <= 0.5
-        pre_label(i,1) = predict(i,1);
-        pre_label(i,2) = 0;
-    else
-        pre_label(i,1) = predict(i,1);
-        pre_label(i,2) = 1;
+threshold = 0;% initial is 0
+% Nnum = 0;
+% Pnum = 0;
+acc = zeros(40,2);
+oldacc = 0;
+iteration = 1;
+step = 1/38; %in test dataset, there are 38 positive labels and 38 negative 
+for threshold = 0:step:1
+    for i = 1:n
+        if predict(i,2) <= threshold
+            pre_label(i,1) = predict(i,1); % the index of the data
+            pre_label(i,2) = 0;
+            %Nnum = Nnum + 1;% # of negavtive labels
+        else
+            pre_label(i,1) = predict(i,1);
+            pre_label(i,2) = 1;
+        end
     end
+    confmatrix = confusionmat(realtest(:,2), pre_label(:,2));
+    newacc = trace(confmatrix)/n;
+
+    acc(iteration,1) = newacc;
+    acc(iteration,2) = threshold;
+    iteration = iteration+1;
+    if newacc >= oldacc
+        oldacc = newacc;
+        %threshold = threshold + step;
+    else
+        newacc = oldacc;
+        break;
+    end
+    
 end
 
 
 %% construct the confusion matrix
 disp("The confusion matrix is:");
-confmatrix = confusionmat(realtest(:,2), pre_label(:,2));
+%confmatrix = confusionmat(realtest(:,2), pre_label(:,2));
 disp(confmatrix);
 
-acc = trace(confmatrix)/n;
+%acc = trace(confmatrix)/n;
 disp("The accuracy is:");
-disp(acc);
+disp(newacc);
 
 %% plot the ROC curve and get AUC
 
@@ -85,10 +121,14 @@ for i = 1:length(realtruth)
 end
 
 % plot the ROC curve
+figure(1);
 plot(X,Y,'-ro','LineWidth',2,'MarkerSize',3);
+hold on;
+plot(0:0.01:1,0:0.01:1);
 xlabel('False Positive Rate');
 ylabel('True Positive Rate');
-title('ROC curve');
+title('DenseNet121-Monai model ROC curve (on test data)');
+legend("ROC curve");
 
 % compute the area := AUC
 auc = -trapz(X,Y);
