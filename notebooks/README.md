@@ -1,4 +1,4 @@
-# Some Example from Kaggle
+# Some open-source projects from Kaggle
 
 Paths and libraries adjusted for [SCC](https://scc-ondemand.bu.edu/)
 
@@ -60,7 +60,7 @@ EXPLORATORY DATA ANALYSIS (EDA)
 
 ## Model
 1. efficientnet-b0
-2. efficientnet in keras?
+2. efficientnet in keras
 3. efficientnet-b0
 4. 4-input CNN model
 5. ResNet50 (LSTM)
@@ -82,22 +82,24 @@ EXPLORATORY DATA ANALYSIS (EDA)
 5. binary_crossentropy
 6. binary_cross_entropy_with_logits
 
-## Accuracy (Train/Validate): 
-1.
-2.
-3.
-4. training acc=0.7030
-5.
-6. auc=0.65
+## Accuracy / auc: 
+1. accuracy = 0.5263, auc = 0.5291
+2. accuracy = 0.5263, auc = 0.5291
+3. accuracy = 0.5263, auc - 0.5291
+4. accuracy = 0.5, acc = 0.4439
+5. accuracy = 0.6184, auc = 0.6565
+6. accuracy = 0.5, auc = 0.5796
 
-
+* case 1,2,3 use almost the same method, so they have the same accuracy and auc.
 
 # Reference:
-
+These are links of open-source projects.
 * [🧠Brain Tumor🧠 - EDA with Animations and Modeling](https://www.kaggle.com/ihelon/brain-tumor-eda-with-animations-and-modeling)	
 * [🧠Brain Tumor 3D Training](https://www.kaggle.com/ammarnassanalhajali/brain-tumor-3d-training)
 * [Brain Tumor EDA with score](https://www.kaggle.com/blade001/brain-tumor-eda-with-score)
 * [Brain Tumor 3D Multimodal CNN - All MRI Type](https://www.kaggle.com/michaelfumery/brain-tumor-3d-multimodal-cnn-all-mri-type/)
 * [🧠Brain Tumor - Transfert Learning - FLAIR - Kfold](https://www.kaggle.com/michaelfumery/brain-tumor-transfert-learning-flair-kfold)
-* [Monai - ensemble](https://www.kaggle.com/mikecho/rsna-miccai-monai-ensemble/notebook)
+* [Monai - ensemble](https://www.kaggle.com/mikecho/rsna-miccai-monai-ensemble/notebook)  
+
+Here is our meeting record.
 * [Meeting Minutes on Google Doc](https://docs.google.com/document/d/1po9hrZAp04lbLL3IngvLaURMMgkMC6j_7K1OG1VMwKI/edit)
