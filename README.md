@@ -26,10 +26,6 @@ If you want more details about this competition, please [click here](https://www
     [Slides](https://docs.google.com/presentation/d/1ORs0PzGxYIg9fgvDt4KmARgAMtmrfz4tpp-DC2gAvp4/edit?usp=sharing)   Reporter:Tian Tan  
     [Github README](https://github.com/YunjieH/EC-601-A1-Group5/blob/main/Sprint4/README.md)  
 
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
  
 ## Content
 * notebooks/
