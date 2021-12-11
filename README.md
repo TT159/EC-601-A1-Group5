@@ -41,7 +41,7 @@ Contains experiment made in sprint 4
 
 
 * Interface
-
+The most recent update please look at the repository: https://github.com/sunarmed/EC601-Project
 It is a website based on Django framework. In Interface/demo/ run
 ```
 python3 manage.py runserver
