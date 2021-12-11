@@ -43,5 +43,7 @@ Contains experiment made in sprint 4
 * Interface
 
 It is a website based on Django framework. In Interface/demo/ run
-> python3 manage.py runserver
+```
+python3 manage.py runserver
+```
 will start the website. Go to http://127.0.0.1:8000/ will see the webpage. 
