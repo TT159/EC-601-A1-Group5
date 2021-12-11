@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> EC601 Project</title>
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'show_mri/styles.css' %}"/>
+    </head>
+    <body>
+    <header>
+        <nav class="nav">
+            <div class="nav_link">
+                <ul>
+                    <li><a href="/show_mri/about.html" >ABOUT</a></li>
+                    <li><a href="/show_mri" >HOME</a></li>
+                </ul>
+            </div>
+            <h1 id="title">
+                EC601 Group 5: Brain Tumor Radiogenomic Classification 
+            </h1>
+            <div id="author_list">
+                <u1>
+                    <li>Yunjie Huang,</li>
+                    <li>Lu Yao,</li>
+                    <li>Tan, Tian,</li>
+                    <li>Rueiyang Huang</li>
+                </u1>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="row">
+            {% load static %}
+            <div class="side">
+                <form action="#" method="POST"> 
+                    {% csrf_token %}
+                    <h3 id="side-title">
+                        Image Sample Selection  
+                    </h3>
+                    <hr>
+                  <label for="pid" class="rlabel">Select ID</label>
+                  <div class="select-container">
+                      <div class="select">
+                          <select id="pid" name="patient-id">
+
+                            {% for pn in patient_list %}
+                            <option value="{{ pn }}" {% if pn == PID %} selected {% endif %} >{{ pn }}</option>
+                            {% endfor %}
+
+
+                          </select>
+                          <span class="focus"></span>
+                      </div>
+                  
+                  </div>
+                  <div class="select-container">
+                     <label class="rlabel">MGMT Score = <span style="color:red;">{{MGMT_score}} </span></label>
+                  </div>
+                  <div>
+                  <label class="rlabel">
+                      Select Sampling Strategy
+                  </label>
+                  </div>
+                  <div class="radio-container">
+
+                    <label class="radio">
+                        <input type="radio" name="Sampling" value="m32" {% if STA == "m32" %} checked {% endif %}>
+                        <span>Centered</span>
+                    </label> 
+                    <label class="radio">
+                        <input type="radio" name="Sampling" value="d32" {% if STA == "d32" %} checked {% endif %}>
+                        <span>Equally Distributed</span>
+                    </label> 
+                  </div>
+                  <label class="rlabel">
+                      MRI Imaging Type
+                  </label>
+                  <div class="radio-container">
+
+                    <label class="radio">
+                        <input type="radio" name="MRI-type" value="FLAIR" {{radio_flair_checked}}>
+                        <span>FLAIR</span>
+                    </label> 
+                    <label class="radio">
+                        <input type="radio" name="MRI-type" value="T1w" {{radio_t1w_checked}}>
+                        <span>T1w</span>
+                    </label> 
+                    <label class="radio">
+                        <input type="radio" name="MRI-type" value="T2w" {{radio_t2w_checked}}>
+                        <span>T2w</span>
+                    </label> 
+                    <label class="radio">
+                        <input type="radio" name="MRI-type" value="T1wCE"{{radio_t1wce_checked}}>
+                        <span>T1wCE</span>
+                    </label> 
+
+                  </div>
+                  <input type="submit" value="Rendering" class="button-4"/>
+                </form>
+                <div class="upload">
+                    <label style="font-size: bold;">
+                        Upload a new MRI set
+                    </label>
+                    <form>
+                        <input type="file" id="MRI_DIR" webkitdirectory directory multiple name="MRI_DIR"/>
+                        <br><br>
+                        <input type="submit" name="test-set" value="Upload Test">
+                        <input type="submit" name="train-set" value="Upload Train">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="column">        
+
+                {% for pt in col1_image_path %}
+                    <img class="slice" src="{% static pt %}">
+                {% endfor %}
+
+            </div>
+            <div class="column">        
+                {% for pt in col2_image_path %}
+                    <img class="slice" src="{% static pt %}">
+                {% endfor %}
+            </div>
+            <div class="column">        
+                {% for pt in col3_image_path %}
+                    <img class="slice" src="{% static pt %}">
+                {% endfor %}
+            </div>
+            <div class="column">        
+                {% for pt in col4_image_path %}
+                    <img class="slice" src="{% static pt %}">
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    </body>
+
+</html>

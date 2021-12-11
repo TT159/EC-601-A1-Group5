@@ -32,3 +32,16 @@ If you want more details about this competition, please [click here](https://www
 * notebooks/
 
 Contains several Jupyter notebooks from other Kaggle competition participants. They are tested on BU SCC (shared computing cluster). Additional resources, like a pretrained network parameters, required by some of the notebooks are uploaded to SCC storage in the specified path. Further explanations are in this [README](https://github.com/YunjieH/EC-601-A1-Group5/blob/main/notebooks/README.md)
+
+
+
+* Sprint4
+
+Contains experiment made in sprint 4
+
+
+* Interface
+
+It is a website based on Django framework. In Interface/demo/ run
+> python3 manage.py runserver
+will start the website. Go to http://127.0.0.1:8000/ will see the webpage. 
